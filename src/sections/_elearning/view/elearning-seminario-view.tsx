@@ -14,7 +14,7 @@ import { useBoolean } from 'src/hooks/use-boolean';
 import { useResponsive } from 'src/hooks/use-responsive';
 import { SeminarioSanity } from 'src/types/SanitySeminario';
 import { SplashScreen } from 'src/components/loading-screen';
-import PayPalCheckout from 'src/sections/payment/view/PaymentPaypal';
+import PayPalCheckoutSeminar from 'src/sections/payment/view/paymentSeminar';
 
 import ElearningNewsletter from '../elearning-newsletter';
 import ElearningSeminarioListSimilar from '../list-seminarios/elearning-seminario-list-similar';
@@ -88,7 +88,7 @@ export default function ElearningSeminarioView({
     <>
       {checkout && (
         <div style={paypalContainerStyles}>
-          <PayPalCheckout prod={prod} />
+          <PayPalCheckoutSeminar prod={prod} />
         </div>
       )}
       {!checkout && (
