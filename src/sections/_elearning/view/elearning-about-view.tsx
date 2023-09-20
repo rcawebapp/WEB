@@ -38,7 +38,7 @@ export default function ElearningAboutView() {
 
       {/* <ElearningTestimonial testimonials={_testimonials} /> */}
 
-      <ElearningLatestPosts posts={_coursePosts.slice(0, 4)} />
+      <ElearningLatestPosts posts={_coursePosts.slice(0, 1)} />
 
       <ElearningNewsletter />
     </>
