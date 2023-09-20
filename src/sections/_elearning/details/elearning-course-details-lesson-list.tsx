@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { useBoolean } from 'src/hooks/use-boolean';
 import { ICourseLessonProp } from 'src/types/course';
 
+import Translate from 'src/app/[locale]/sections/Translate';
 import ElearningCourseDetailsLessonItem from './elearning-course-details-lesson-item';
 import ElearningCourseDetailsLessonsDialog from './elearning-course-details-lessons-dialog';
 
@@ -46,7 +47,7 @@ export default function ElearningCourseDetailsLessonList({ lessons }: Props) {
   return (
     <div>
       <Typography variant="h4" sx={{ mb: 3 }}>
-        Lecciones
+      <Translate section="course" text="Lecciones" />
       </Typography>
 
 
