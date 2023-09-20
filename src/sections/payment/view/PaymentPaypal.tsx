@@ -10,6 +10,7 @@ import { Box, Stack, Switch, Divider, Typography } from '@mui/material';
 
 import Iconify from 'src/components/iconify';
 import { client } from 'src/app/[locale]/utils/client';
+import Translate from 'src/app/[locale]/sections/Translate';
 
 type Prod = {
   description: string;
@@ -96,7 +97,7 @@ function PayPalCheckout({ prod }: Props) {
       }}
     >
       <Typography variant="h5" sx={{ mb: 5 }}>
-        Resumen
+      <Translate section="payment" text="Resumen" />
       </Typography>
 
       <Stack spacing={2.5}>
