@@ -1,35 +1,33 @@
 'use client';
 
+import Link from 'next-intl/link';
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
-
-import Link from 'next-intl/link';
 import { usePathname } from 'next-intl/client';
 
-import { Popover } from '@mui/material';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
+import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
-import Container from '@mui/material/Container';
 import { useTheme } from '@mui/material/styles';
+import Container from '@mui/material/Container';
+import { Menu, Tooltip, Divider, MenuItem, IconButton } from '@mui/material';
 
-import { bgBlur } from 'src/theme/css';
 import Logo from 'src/components/logo';
-import { useResponsive } from 'src/hooks/use-responsive';
+import { bgBlur } from 'src/theme/css';
+import Iconify from 'src/components/iconify';
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
+import { useResponsive } from 'src/hooks/use-responsive';
 import Translate from 'src/app/[locale]/sections/Translate';
 
 import LongMenu from '../common/longmenu';
+import { HEADER } from '../config-layout';
+import HeaderShadow from '../common/header-shadow';
 import LongMenuUser from '../common/longmenu-user';
 
-import HeaderShadow from '../common/header-shadow';
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
-
-import { HEADER } from '../config-layout';
 import { navConfig } from './config-navigation';
-
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -99,7 +97,48 @@ export default function Header({ headerOnDark }: Props) {
           <Logo />
           {mdUp && <NavDesktop data={navConfig} />}
 
-          <Stack spacing={2} direction="row" alignItems="center" justifyContent="flex-end">
+          <Stack spacing={1} direction="row" alignItems="center" justifyContent="flex-end">
+            <Tooltip title="Translate">
+              <IconButton
+                onClick={handleClick}
+                aria-controls="translate-menu"
+                aria-haspopup="true"
+                style={{ color: '#0455BF', cursor: 'pointer' }}
+              >
+                <Iconify icon="material-symbols:translate" color="#0455BF" width="32" height="32" />
+              </IconButton>
+            </Tooltip>
+            <Menu
+  id="translate-menu"
+  anchorEl={anchorEl}
+  open={open}
+  onClose={handleClose}
+  anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+  sx={{
+    padding: '15px 20px',
+    cursor: 'pointer',
+    '& .MuiMenuItem-root': {
+      fontSize: '15px', 
+      padding: '6px 10px', 
+    },
+  }}
+>
+              <Link
+                style={{ color: 'black', textDecoration: 'none' }}
+                href={url}
+                locale="en"
+              >
+                <MenuItem>English</MenuItem>
+              </Link>
+              <Divider />
+              <Link
+                style={{ color: 'black', textDecoration: 'none' }}
+                href={url}
+                locale="es"
+              >
+                <MenuItem>Español</MenuItem>
+              </Link>
+            </Menu>
             <Stack spacing={1} direction="row" alignItems="center">
               {session ? <LongMenuUser /> : <LongMenu />}
             </Stack>
@@ -120,45 +159,6 @@ export default function Header({ headerOnDark }: Props) {
               </Button>
             )}
           </Stack>
-
-          <button
-            type="button"
-            aria-describedby={id}
-            onClick={handleClick}
-            style={{ color: 'black', cursor: 'pointer' }}
-          >
-            <Translate section="navHeader" text="Cambiar idioma" />
-          </button>
-          <Popover
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-            onClose={handleClose}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            sx={{
-              padding: '15px 20px',
-              cursor: 'pointer',
-            }}
-          >
-            <Link
-              style={{ color: 'black', textDecoration: 'none', padding: '6px 10px' }}
-              href={url}
-              locale="en"
-            >
-              English
-            </Link>
-            <br />
-            <Link
-              style={{ color: 'black', textDecoration: 'none', padding: '6px 10px' }}
-              href={url}
-              locale="es"
-            >
-              Español
-            </Link>
-          </Popover>
 
           {!mdUp && <NavMobile data={navConfig} />}
         </Container>
