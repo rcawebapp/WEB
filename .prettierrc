@@ -1,0 +1,26 @@
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "importOrder": [
+    ["builtin", "external"],
+    "mui",
+    "internal",
+    "parent",
+    "sibling",
+    "object",
+    "unknown"
+  ],
+  "importOrderCustomGroups": {
+    "mui": "@mui/**",
+    "internal": "src/**",
+    "parent": "../**",
+    "sibling": "./**"
+  },
+  "importOrderNewlines": "always",
+  "importOrderCaseInsensitive": true,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+
+}
