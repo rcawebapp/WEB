@@ -52,7 +52,7 @@ export default function ElearningLandingView({
 
       <ElearningTeam members={_members.slice(0, 4)} />
 
-      <ElearningLandingFeaturedSeminarios locale={locale} seminarios={seminarios} />
+      {/* <ElearningLandingFeaturedSeminarios locale={locale} seminarios={seminarios} /> */}
 
       {/* <ElearningTestimonial testimonials={_testimonials} /> */}
 
