@@ -60,14 +60,13 @@ export default function Elearninglanding({ locale }: any) {
             py: 2,
             display: { md: 'flex' },
             alignItems: { md: 'center' },
-            mt: locale === 'en' ? 0 : -10,
+            mt: locale === 'en' ? 0 : 8,
           }}
         >
           <Stack
             sx={{
               textAlign: 'center',
-              mt: 4,
-              paddingTop: 5,
+
             }}
           >
             {/* <ElearningHeroIllustration /> */}
