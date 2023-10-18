@@ -13,16 +13,24 @@ import { varBounce, MotionContainer } from 'src/components/animate';
 
 export default function MaintenanceView() {
   return (
-    <MotionContainer>
+    <MotionContainer
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',  // Centrar elementos horizontalmente
+      justifyContent: 'center',  // Centrar elementos verticalmente
+      height: '100vh',  // Ajustar la altura al 100% de la ventana
+    }}
+  >
       <m.div variants={varBounce().in}>
         <Typography variant="h3" paragraph>
-          Website Currently Under Maintenance
+          Sitio web actualmente en mantenimiento
         </Typography>
       </m.div>
 
       <m.div variants={varBounce().in}>
         <Typography sx={{ color: 'text.secondary' }}>
-          We are currently working hard on this page!
+        ¡Actualmente estamos trabajando en el mantenimiento de en esta página!
         </Typography>
       </m.div>
 
@@ -38,8 +46,8 @@ export default function MaintenanceView() {
         />
       </m.div>
 
-      <Button component={RouterLink} href="/" size="large" color="inherit" variant="contained">
-        Go to Home
+      <Button component={RouterLink} href="https://www.instagram.com/rcacapital/" size="large" color="inherit" variant="contained">
+        Instagram link
       </Button>
     </MotionContainer>
   );
