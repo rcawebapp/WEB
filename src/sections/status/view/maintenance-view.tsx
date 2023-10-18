@@ -30,7 +30,7 @@ export default function MaintenanceView() {
 
       <m.div variants={varBounce().in}>
         <Typography sx={{ color: 'text.secondary' }}>
-        ¡Actualmente estamos trabajando en el mantenimiento de en esta página!
+        ¡Actualmente estamos trabajando en el mantenimiento de esta página!
         </Typography>
       </m.div>
 
