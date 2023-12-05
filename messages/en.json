@@ -1,7 +1,7 @@
 {
   "navHeader": {
     "Home": "Home",
-    "Cursos": "Courses",
+    "Nuestro Club": "Our Club",
     "Blog": "Blog",
     "Mentorias": "Mentoring",
     "Seminarios": "Seminars",
@@ -43,7 +43,7 @@
       "Registrar": "Register"
     },
     "courses": {
-      "Cursos": "Courses",
+      "Nuestro Club": "Our Club",
       "Temáticas": "THEMES",
       "Filtros": "Filters",
       "Todos los temas": "All the themes",

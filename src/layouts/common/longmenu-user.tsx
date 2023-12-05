@@ -83,7 +83,7 @@ export default function AccountMenuUser() {
           </MenuItem>
         </Link>
         <Divider />
-        <Link href="/scheduled" style={{ textDecoration: 'none', color: 'inherit' }}>
+        {/* <Link href="/scheduled" style={{ textDecoration: 'none', color: 'inherit' }}>
           <MenuItem onClick={handleClose} style={{ fontSize: '15px' }}>
             <ListItemIcon>
               <EventAvailableIcon fontSize="medium" />
@@ -91,7 +91,7 @@ export default function AccountMenuUser() {
             <Translate section="navHeader" text="Seminarios programados" />
           </MenuItem>
         </Link>
-        <Divider />
+        <Divider /> */}
         {/* <Link href="/soporte" style={{ textDecoration: 'none', color:'inherit' }}>
     <MenuItem onClick={handleClose} style={{ fontSize: '15px' }}> 
       

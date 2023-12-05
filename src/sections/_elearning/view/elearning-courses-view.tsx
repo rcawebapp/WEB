@@ -65,7 +65,7 @@ export default function ElearningCoursesView({ courses }: { courses: CourseSanit
           }}
         >
           <Typography variant="h2">
-            <Translate section="courses" text="Cursos" />
+            <Translate section="courses" text="Nuestro Club" />
           </Typography>
 
           <Button

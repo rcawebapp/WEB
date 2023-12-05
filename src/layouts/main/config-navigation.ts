@@ -37,7 +37,7 @@ export const pageLinks = [
 
 export const navConfig = [
   { title: 'Home', path: '/' },
-  { title: 'Cursos', path: paths.courses },
+  { title: 'Nuestro Club', path: paths.courses },
   { title: 'Blog', path: paths.posts },
   {
     title: 'Mentorias',
@@ -52,7 +52,7 @@ export const navConfig = [
       },
     ],
   },
-  { title: 'Seminarios', path: paths.seminarios },
+  // { title: 'Seminarios', path: paths.seminarios },
   { title: 'Nosotros', path: paths.about },
   { title: 'Contacto', path: paths.contact },
 ]
