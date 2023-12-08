@@ -37,17 +37,18 @@ export const pageLinks = [
 
 export const navConfig = [
   { title: 'Home', path: '/' },
-  { title: 'Nuestro Club', path: paths.courses },
+  // { title: 'Cursos', path: paths.courses },
   { title: 'Blog', path: paths.posts },
   {
-    title: 'Mentorias',
+    title: 'Mentorias & Suscripciones',
     path: '/page',
     children: [
       {
         subheader: '',
         items: [
-          { title: 'Trading', path: '/mentorias-trading' },
-          { title: 'Investing', path: '/mentorias-investing' },
+          { title: 'Nuestro Club', path: paths.nuestroclub },
+          { title: 'Mentorias Trading', path: paths.mentoriastrading },
+          { title: 'Mentorias Investing', path: paths.mentoriasinvesting },
         ],
       },
     ],

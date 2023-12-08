@@ -12,6 +12,7 @@ export const paths = {
   contact: '/contacto',
   seminarios: '/seminarios',
   seminario: '/seminario',
+  nuestroclub: '/nuestro-club',
   // Auth
   loginBackground: '/auth/iniciar-sesion',
   registerBackground: '/auth/registrar',

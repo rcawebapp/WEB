@@ -13,7 +13,7 @@ export default function MentoriasIncluye() {
         px: { xs: 10, md: 8 },
       }}
     >
-      <Divider sx={{ bgcolor: 'white', borderWidth: '2px' }} />
+      {/* <Divider sx={{ bgcolor: 'white', borderWidth: '2px' }} />
       <Stack
         spacing={3}
         direction={{ xs: 'column', md: 'column' }}
@@ -76,7 +76,7 @@ export default function MentoriasIncluye() {
             text=" Acceso a nuevos desarrollos realizados por el equipo de RCA Capital sin costo adicional"
           />
         </Typography>
-      </Stack>
+      </Stack> */}
 
       <Divider sx={{ bgcolor: 'white', borderWidth: '2px' }} />
       <Stack

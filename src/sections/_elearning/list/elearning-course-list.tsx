@@ -16,7 +16,7 @@ type Props = {
 export default function ElearningCourseList({ courses, loading }: Props) {
   return (
     <>
-      <Stack spacing={4}>
+      <Stack spacing={6}>
         {(loading ? [...Array(9)] : courses).map((course, index) =>
           course ? (
             <ElearningCourseItem key={course.id} course={course} />

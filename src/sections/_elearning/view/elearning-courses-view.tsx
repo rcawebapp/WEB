@@ -62,6 +62,7 @@ export default function ElearningCoursesView({ courses }: { courses: CourseSanit
           justifyContent="space-between"
           sx={{
             py: 5,
+            px: 11,
           }}
         >
           <Typography variant="h2">
@@ -82,17 +83,18 @@ export default function ElearningCoursesView({ courses }: { courses: CourseSanit
         </Stack>
 
         <Stack direction={{ xs: 'column', md: 'row' }}>
-          <ElearningFilters
+          {/* <ElearningFilters
             open={mobileOpen.value}
             onClose={mobileOpen.onFalse}
             filters={filters}
             setFilters={setFilters}
-          />
+          /> */}
 
           <Box
             sx={{
               flexGrow: 1,
-              pl: { md: 8 },
+              pl: { md: 10 },
+              pr: { md: 10 },
               width: { md: `calc(100% - ${280}px)` },
             }}
           >

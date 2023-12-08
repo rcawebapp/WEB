@@ -68,7 +68,7 @@ type Props = {
   setCheckout: (value: boolean) => void;
 };
 
-export default function ElearningMentoriasInvesting({ setProd, setCheckout }: Props) {
+export default function ElearningSus({ setProd, setCheckout }: Props) {
   const t = useTranslations('video');
   const handleOpenCheckout = (card: {
     plan: string;
@@ -112,8 +112,8 @@ export default function ElearningMentoriasInvesting({ setProd, setCheckout }: Pr
               mb: { xs: 4, md: 0 },
             }}
           >
-            <Typography variant="h1" sx={{ mt: 0 }}>
-              <span style={{ borderBottom: '5px dotted white' }}>Mentoring Investing</span>
+            <Typography variant="h2" sx={{ mt: 0 }}>
+              <span style={{ borderBottom: '5px dotted white' }}>Nuestro Club</span>
             </Typography>
             <Box
               sx={{
@@ -131,7 +131,7 @@ export default function ElearningMentoriasInvesting({ setProd, setCheckout }: Pr
               <Typography>
                 <Translate
                   section="seminarInvesting"
-                  text="Toda nuestra tecnología y experiencia a tu servicio para diseñar, optimizar y maximizar los resultados de tu portafolio personal o familiar"
+                  text="Construir tu portafolio de Ingresos Recurrentes ahora al alcance de un click"
                 />
               </Typography>
             </Box>
