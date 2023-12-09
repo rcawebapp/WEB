@@ -112,7 +112,7 @@ export default function ElearningMentoriasInvesting({ setProd, setCheckout }: Pr
               mb: { xs: 4, md: 0 },
             }}
           >
-            <Typography variant="h1" sx={{ mt: 0 }}>
+            <Typography variant="h2" sx={{ mt: 0 }}>
               <span style={{ borderBottom: '5px dotted white' }}>Mentoring Investing</span>
             </Typography>
             <Box

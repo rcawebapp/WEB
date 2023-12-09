@@ -112,7 +112,7 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
               mb: { xs: 4, md: 0 },
             }}
           >
-            <Typography variant="h2" sx={{ mt: 0 }}>
+            <Typography variant="h1" sx={{ mt: 0 }}>
               <span style={{ borderBottom: '5px dotted white' }}>Nuestro Club</span>
             </Typography>
             <Box
@@ -131,7 +131,7 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
               <Typography>
                 <Translate
                   section="seminarInvesting"
-                  text="Construir tu portafolio de Ingresos Recurrentes ahora al alcance de un click"
+                  text="Nuestro Club de Ingresos Recurrentes es un servicio directo, completo y efectivo para que comiences a construir tus fuentes de ingreso alternativas, paso a paso, de forma completamente consciente y sencilla"
                 />
               </Typography>
             </Box>
@@ -214,6 +214,26 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
                 </Grid>
               ))}
             </Grid>
+            <Box
+              sx={{
+                mt: 10,
+                mb: 0,
+                mr: 5,
+                ml: 5,
+                backgroundColor: 'transparent',
+                borderRadius: '15px',
+                padding: '10px',
+                boxShadow: '0px 9px 20px rgba(0, 0, 0, 0.05)',
+                textAlign: 'center',
+              }}
+            >
+              <Typography>
+                <Translate
+                  section="club"
+                  text="Obtendrás educación, tips, noticias, actualizaciones y oportunidades de la mano de nuestro socio fundador y nuestro equipo tecnológico. Construir tu portafolio de Ingresos Recurrentes ahora al alcance de un click"
+                />
+              </Typography>
+            </Box>
 
             <MentoriasIncluye />
           </Grid>

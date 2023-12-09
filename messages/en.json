@@ -95,9 +95,13 @@
       "Mensaje": "Message",
       "Enviar": "Send"
     },
+    "club":{
+      "esto":"this",
+      "Obtendrás educación, tips, noticias, actualizaciones y oportunidades de la mano de nuestro socio fundador y nuestro equipo tecnológico. Construir tu portafolio de Ingresos Recurrentes ahora al alcance de un click": "esto"
+    },
     "seminarInvesting": {
       "Toda nuestra tecnología y experiencia a tu servicio para diseñar, optimizar y maximizar los resultados de tu portafolio personal o familiar": "All our technology and experience at your service to design, optimize and maximize the results of your personal or family portfolio.",
-      "Construir tu portafolio de Ingresos Recurrentes ahora al alcance de un click": "Build your Recurring Income portfolio now with just one click"
+      "Nuestro Club de Ingresos Recurrentes es un servicio directo, completo y efectivo para que comiences a construir tus fuentes de ingreso alternativas, paso a paso, de forma completamente consciente y sencilla": "Our Recurring Income Club is a direct, complete and effective service for you to start building your alternative sources of income, step by step, in a completely conscious and simple way"
     },
     "seminar": {
       "Quién lo dicta: Nuestro socio fundador, el ingeniero Roberto Claro Araque": "Given by: Our founding partner, engineer Roberto Claro Araque",
