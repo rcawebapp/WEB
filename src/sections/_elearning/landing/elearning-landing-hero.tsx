@@ -143,7 +143,7 @@ export default function Elearninglanding({ locale }: any) {
               <Fab
                 size="medium"
                 color="primary"
-                href="/cursos"
+                href="/nuestro-club"
                 onClick={videoOpen.onTrue}
                 sx={{ mr: 1 }}
               >
