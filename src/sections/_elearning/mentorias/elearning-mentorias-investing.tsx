@@ -11,6 +11,7 @@ import Player from 'src/components/player';
 
 import Translate from 'src/app/[locale]/sections/Translate';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import MentoriasIncluye from './mentorias-incluye';
 
 type Prod = {
@@ -23,7 +24,7 @@ type Prod = {
 
 const cardData = [
   {
-    plan: '1 mes',
+    plan: 'Mensual',
     tipo: 'Investing',
     price: '250',
     features: [
@@ -32,11 +33,11 @@ const cardData = [
       'Valoración y optimización de estrategias',
       'Acceso a nuevos desarrollos',
     ],
-    buttonText: 'Explora este mes',
-    buttonLink: '/plan-basico',
+    buttonText: 'Obtener 1 mes',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30364/3ADC0FAD/view',
   },
   {
-    plan: '3 meses',
+    plan: 'Trimestral',
     tipo: 'Investing',
     price: '675',
     features: [
@@ -46,10 +47,10 @@ const cardData = [
       'Acceso a nuevos desarrollos',
     ],
     buttonText: 'Obtener 3 meses',
-    buttonLink: '/plan-profesional',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30366/3DFA8E5C/view',
   },
   {
-    plan: '6 meses',
+    plan: 'Anual',
     tipo: 'Investing',
     price: '1250',
     features: [
@@ -59,7 +60,7 @@ const cardData = [
       'Acceso a nuevos desarrollos',
     ],
     buttonText: 'Obtener 6 meses',
-    buttonLink: '/plan-ultimate',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30367/7384376E/view',
   },
 ];
 
@@ -199,17 +200,17 @@ export default function ElearningMentoriasInvesting({ setProd, setCheckout }: Pr
                         </ul>
                       </div>
                     </CardContent>
-                    <Button
-                      onClick={() => handleOpenCheckout(card)}
-                      variant="outlined"
-                      size="large"
-                      color="primary"
-                      style={{ textTransform: 'none' }}
-                      sx={{ mt: 1, ml: 3, mr: 3, mb: 2, fontSize: '1.2em' }}
-                    >
-                      {/* The button here should take you to the payment of the card */}
-                      <Translate section="seminarTrading" text={card.buttonText} />
-                    </Button>
+                    <Link href={card.buttonLink} passHref>
+                       <Button
+                       variant="outlined"
+                       size="large"
+                        color="primary"
+                        style={{ textTransform: 'none' }}
+                        sx={{ mt: 1, ml: 3, mr: 3, mb: 2, fontSize: '1.2em' }}
+                         >
+                      <Translate section="club" text={card.buttonText} />
+                           </Button>
+                     </Link>
                   </Card>
                 </Grid>
               ))}

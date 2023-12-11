@@ -11,6 +11,7 @@ import Player from 'src/components/player';
 
 import Translate from 'src/app/[locale]/sections/Translate';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import MentoriasIncluye from './mentorias-incluye';
 
 type Prod = {
@@ -23,43 +24,46 @@ type Prod = {
 
 const cardData = [
   {
-    plan: '1 mes',
-    tipo: 'Investing',
+    plan: 'Mensual',
+    tipo: 'Club',
     price: '250',
     features: [
-      'Seminario de 6 horas',
-      'Reunión semanal',
-      'Valoración y optimización de estrategias',
-      'Acceso a nuevos desarrollos',
+      'Acceso a capacitación en inversiones en acciones y ETFs',
+      'Informes semanales de oportunidades de inversión',
+      'Videos educativos sobre ingresos recurrentes en mercados financieros'
     ],
-    buttonText: 'Explora este mes',
-    buttonLink: '/plan-basico',
+    buttonText: 'Obtener 1 mes',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30361/B09C0E41/view',
   },
   {
-    plan: '3 meses',
-    tipo: 'Investing',
+    plan: 'Trimestral',
+    tipo: 'Club',
     price: '675',
     features: [
-      'Seminario de 6 horas',
-      'Reunión semanal',
-      'Valoración y optimización de estrategias',
-      'Acceso a nuevos desarrollos',
+      'Acceso a capacitación en inversiones en acciones y ETFs',
+      'Informes semanales de oportunidades de inversión',
+      'Videos educativos sobre ingresos recurrentes en mercados financieros',
+      'Actualizaciones en estrategias y métodos de inversión',
+      'Recursos ampliados para ingresos recurrentes'
     ],
     buttonText: 'Obtener 3 meses',
-    buttonLink: '/plan-profesional',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30362/3E9656B9/view',
   },
   {
-    plan: '6 meses',
-    tipo: 'Investing',
+    plan: 'Anual',
+    tipo: 'Club',
     price: '1250',
     features: [
-      'Seminario de 6 horas',
-      'Reunión semanal',
-      'Valoración y optimización de estrategias',
-      'Acceso a nuevos desarrollos',
+      'Acceso a capacitación en inversiones en acciones y ETFs',
+      'Informes semanales de oportunidades de inversión',
+      'Videos educativos sobre ingresos recurrentes en mercados financieros',
+      'Actualizaciones en estrategias y métodos de inversión',
+      'Recursos ampliados para ingresos recurrentes',
+      'Webinars recurrentes sobre técnicas de inversión',
+      'Llamada mensual con el fundador para asesoría en inversiones'
     ],
     buttonText: 'Obtener 6 meses',
-    buttonLink: '/plan-ultimate',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30363/B25449F4/view',
   },
 ];
 
@@ -119,8 +123,8 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
               sx={{
                 mt: 3,
                 mb: 3,
-                mr: 5,
-                ml: 5,
+                mr: 10,
+                ml: 10,
                 backgroundColor: 'white',
                 borderRadius: '15px',
                 padding: '10px',
@@ -130,15 +134,15 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
             >
               <Typography>
                 <Translate
-                  section="seminarInvesting"
-                  text="Nuestro Club de Ingresos Recurrentes es un servicio directo, completo y efectivo para que comiences a construir tus fuentes de ingreso alternativas, paso a paso, de forma completamente consciente y sencilla"
+                  section="club"
+                  text="Nuestro club de ingresos recurrentes es un servicio directo, completo y efectivo para que comiences a construir tus fuentes de ingreso alternativas, paso a paso, de forma completamente consciente y sencilla"
                 />
               </Typography>
             </Box>
             <Grid item xs={12} sx={{ mb: 6 }}>
               <Player
                 controls
-                url={t('mentoring')}
+                url={t('landingPage')}
                 style={{
                   display: 'block',
                   margin: '0 auto',
@@ -183,13 +187,13 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
                           component="div"
                           sx={{ fontSize: '1.75em', fontWeight: 700 }}
                         >
-                          <Translate section="seminarTrading" text={card.plan} />
+                          <Translate section="club" text={card.plan} />
                         </Typography>
                         <ul style={{ listStyle: 'none', paddingInlineStart: 0, marginTop: '10px' }}>
                           {card.features.map((feature, featureIndex) => (
                             <li key={featureIndex}>
                               <span>
-                                <Translate section="seminarTrading" text={feature} />
+                                <Translate section="club" text={feature} />
                               </span>
                               {featureIndex !== card.features.length - 1 && (
                                 <hr style={{ borderTop: '1px solid #e0e0e0', marginTop: '8px' }} />
@@ -199,43 +203,44 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
                         </ul>
                       </div>
                     </CardContent>
-                    <Button
-                      onClick={() => handleOpenCheckout(card)}
-                      variant="outlined"
-                      size="large"
-                      color="primary"
-                      style={{ textTransform: 'none' }}
-                      sx={{ mt: 1, ml: 3, mr: 3, mb: 2, fontSize: '1.2em' }}
-                    >
-                      {/* The button here should take you to the payment of the card */}
-                      <Translate section="seminarTrading" text={card.buttonText} />
-                    </Button>
+                    <Link href={card.buttonLink} passHref>
+                       <Button
+                       variant="outlined"
+                       size="large"
+                        color="primary"
+                        style={{ textTransform: 'none' }}
+                        sx={{ mt: 1, ml: 3, mr: 3, mb: 2, fontSize: '1.2em' }}
+                         >
+                      <Translate section="club" text={card.buttonText} />
+                           </Button>
+                     </Link>
+
                   </Card>
                 </Grid>
               ))}
             </Grid>
+
             <Box
               sx={{
-                mt: 10,
+                mt: 15,
                 mb: 0,
-                mr: 5,
-                ml: 5,
+                mr: 15,
+                ml: 15,
                 backgroundColor: 'transparent',
+                color: "grey",
                 borderRadius: '15px',
                 padding: '10px',
-                boxShadow: '0px 9px 20px rgba(0, 0, 0, 0.05)',
+                boxShadow: '0px 9px 20px rgba(0.05, 0.05, 0.05, 0.05)',
                 textAlign: 'center',
               }}
             >
-              <Typography>
-                <Translate
-                  section="club"
-                  text="Obtendrás educación, tips, noticias, actualizaciones y oportunidades de la mano de nuestro socio fundador y nuestro equipo tecnológico. Construir tu portafolio de Ingresos Recurrentes ahora al alcance de un click"
-                />
+              <Typography variant="h5">
+                En este servicio obtendrás educación, tips, noticias, actualizaciones y oportunidades de la mano de nuestro socio fundador y nuestro equipo tecnológico. Construir tu portafolio de ingresos recurrentes ahora al alcance de un click!
               </Typography>
             </Box>
 
-            <MentoriasIncluye />
+
+<MentoriasIncluye />
           </Grid>
         </Grid>
       </Container>

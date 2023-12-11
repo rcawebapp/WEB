@@ -66,7 +66,7 @@ export default function ForgotPasswordView() {
       </Typography>
 
       <FormProvider methods={methods} onSubmit={onSubmit}>
-        <RHFTextField name="email" hiddenLabel placeholder="Dirección email" />
+        <RHFTextField name="email" hiddenLabel placeholder="Email" />
 
         <LoadingButton
           fullWidth
@@ -77,7 +77,7 @@ export default function ForgotPasswordView() {
           loading={isSubmitting}
           sx={{ mt: 2.5 }}
         >
-          <Translate section="forgotPassword" text="Restablecer Contraseña" />
+          <Translate section="forgotPassword" text="Restablecer contraseña" />
         </LoadingButton>
       </FormProvider>
 

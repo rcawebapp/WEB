@@ -30,7 +30,7 @@ type Props = {
 
 const cardData = [
   {
-    plan: '1 mes',
+    plan: 'Mensual',
     tipo: 'Trading',
     price: '250',
     features: [
@@ -39,11 +39,11 @@ const cardData = [
       'Valoración y optimización de estrategias',
       'Acceso a nuevos desarrollos',
     ],
-    buttonText: 'Explora este mes',
-    buttonLink: '/plan-basico',
+    buttonText: 'Obtener 1 mes',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30364/3ADC0FAD/view',
   },
   {
-    plan: '3 meses',
+    plan: 'Trimestral',
     tipo: 'Trading',
     price: '675',
     features: [
@@ -53,10 +53,10 @@ const cardData = [
       'Acceso a nuevos desarrollos',
     ],
     buttonText: 'Obtener 3 meses',
-    buttonLink: '/plan-profesional',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30366/3DFA8E5C/view',
   },
   {
-    plan: '6 meses',
+    plan: 'Anual',
     tipo: 'Trading',
     price: '1250',
     features: [
@@ -66,7 +66,7 @@ const cardData = [
       'Acceso a nuevos desarrollos',
     ],
     buttonText: 'Obtener 6 meses',
-    buttonLink: '/plan-ultimate',
+    buttonLink: 'https://transactions.sendowl.com/subscriptions/30367/7384376E/view',
   },
 ];
 
@@ -186,13 +186,13 @@ export default function ElearningMentoriasTrading({ setProd, setCheckout }: Prop
                           component="div"
                           sx={{ fontSize: '1.75em', fontWeight: 700 }}
                         >
-                          <Translate section="seminarTrading" text={card.plan} />
+                          <Translate section="club" text={card.plan} />
                         </Typography>
                         <ul style={{ listStyle: 'none', paddingInlineStart: 0, marginTop: '10px' }}>
                           {card.features.map((feature, featureIndex) => (
                             <li key={featureIndex}>
                               <span>
-                                <Translate section="seminarTrading" text={feature} />
+                                <Translate section="club" text={feature} />
                               </span>
                               {featureIndex !== card.features.length - 1 && (
                                 <hr style={{ borderTop: '1px solid #e0e0e0', marginTop: '8px' }} />
