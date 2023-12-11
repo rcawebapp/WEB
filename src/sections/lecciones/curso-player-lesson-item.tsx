@@ -30,8 +30,8 @@ export default function CursoPlayerLessonItem({
     expanded={expanded}
     onChange={onExpanded}
     onClick={onSelected}
-    onMouseEnter={(event) => onExpanded(event, true)} // Expand on mouse enter
-    onMouseLeave={(event) => onExpanded(event, false)} // Collapse on mouse leave
+    // onMouseEnter={(event) => onExpanded(event, true)} // Expand on mouse enter
+    // onMouseLeave={(event) => onExpanded(event, false)} // Collapse on mouse leave
     disabled={false}
     
       sx={{
