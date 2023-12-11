@@ -13,6 +13,7 @@ import Player from 'src/components/player';
 
 import Translate from 'src/app/[locale]/sections/Translate';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import MentoriasIncluye from './mentorias-incluye';
 
 type Prod = {
@@ -202,17 +203,17 @@ export default function ElearningMentoriasTrading({ setProd, setCheckout }: Prop
                         </ul>
                       </div>
                     </CardContent>
-                    <Button
-                      onClick={() => handleOpenCheckout(card)}
-                      variant="outlined"
-                      size="large"
-                      color="primary"
-                      style={{ textTransform: 'none' }}
-                      sx={{ mt: 1, ml: 3, mr: 3, mb: 2, fontSize: '1.2em' }}
-                    >
-                      {/* The button here should take you to the payment of the card */}
-                      <Translate section="seminarTrading" text={card.buttonText} />
-                    </Button>
+                    <Link href={card.buttonLink} passHref>
+                       <Button
+                       variant="outlined"
+                       size="large"
+                        color="primary"
+                        style={{ textTransform: 'none' }}
+                        sx={{ mt: 1, ml: 3, mr: 3, mb: 2, fontSize: '1.2em' }}
+                         >
+                      <Translate section="club" text={card.buttonText} />
+                           </Button>
+                     </Link>
                   </Card>
                 </Grid>
               ))}
