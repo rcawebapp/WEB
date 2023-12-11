@@ -10,6 +10,7 @@ import Iconify from 'src/components/iconify';
 import { fCurrency } from 'src/utils/format-number';
 import { CourseSanity } from 'src/types/SanityCourse';
 import Translate from 'src/app/[locale]/sections/Translate';
+import { useEffect, useState } from 'react';
 
 // ----------------------------------------------------------------------
 
@@ -21,6 +22,7 @@ type Prod = {
   };
 };
 
+
 type Props = {
   course: CourseSanity;
   setProd: (prod: Prod) => void;
@@ -29,16 +31,16 @@ type Props = {
 
 export default function ElearningCourseDetailsInfo({ course, setProd, setCheckout }: Props) {
   const { data: session } = useSession();
+  const [redirectToClub, setRedirectToClub] = useState(false);
+
+  useEffect(() => {
+    if (redirectToClub) {
+      window.location.href = '/nuestro-club';
+    }
+  }, [redirectToClub]);
 
   const handleOpenCheckout = () => {
-    setProd({
-      description: course.id,
-      amount: {
-        currency_code: 'USD',
-        value: course.priceSale || course.price!,
-      },
-    });
-    setCheckout(true);
+    setRedirectToClub(true);
   };
 
   // const handleRegisterClick = () => {

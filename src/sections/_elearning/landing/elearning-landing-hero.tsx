@@ -149,7 +149,7 @@ export default function Elearninglanding({ locale }: any) {
               >
                 <Iconify width={25} icon="fluent-mdl2:learning-tools" />
               </Fab>
-              <Translate section="landing" text="Explorar cursos" />
+              <Translate section="landing" text="Explorar nuestro club" />
               {/* <Fab size="medium" color="info" onClick={videoOpen.onTrue} sx={{ mr: 1 }}>
     <Iconify width={25} icon="fluent-mdl2:learning-tools" />
   </Fab>
