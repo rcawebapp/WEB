@@ -26,7 +26,7 @@ const cardData = [
   {
     plan: 'Mensual',
     tipo: 'Club',
-    price: '250',
+    price: '30',
     features: [
       'Acceso a capacitación en inversiones en acciones y ETFs',
       'Informes semanales de oportunidades de inversión',
@@ -38,7 +38,7 @@ const cardData = [
   {
     plan: 'Trimestral',
     tipo: 'Club',
-    price: '675',
+    price: '60',
     features: [
       'Acceso a capacitación en inversiones en acciones y ETFs',
       'Informes semanales de oportunidades de inversión',
@@ -52,7 +52,7 @@ const cardData = [
   {
     plan: 'Anual',
     tipo: 'Club',
-    price: '1250',
+    price: '160',
     features: [
       'Acceso a capacitación en inversiones en acciones y ETFs',
       'Informes semanales de oportunidades de inversión',
@@ -62,7 +62,7 @@ const cardData = [
       'Webinars recurrentes sobre técnicas de inversión',
       'Llamada mensual con el fundador para asesoría en inversiones'
     ],
-    buttonText: 'Obtener 6 meses',
+    buttonText: 'Obtener un año',
     buttonLink: 'https://transactions.sendowl.com/subscriptions/30363/B25449F4/view',
   },
 ];

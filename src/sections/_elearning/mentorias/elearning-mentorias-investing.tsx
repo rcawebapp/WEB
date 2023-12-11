@@ -59,7 +59,7 @@ const cardData = [
       'Valoración y optimización de estrategias',
       'Acceso a nuevos desarrollos',
     ],
-    buttonText: 'Obtener 6 meses',
+    buttonText: 'Obtener un año',
     buttonLink: 'https://transactions.sendowl.com/subscriptions/30367/7384376E/view',
   },
 ];
