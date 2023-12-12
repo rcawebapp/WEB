@@ -223,7 +223,7 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
             <Box
               sx={{
                 mt: 15,
-                mb: 0,
+                mb: 10,
                 mr: 15,
                 ml: 15,
                 backgroundColor: 'transparent',
@@ -239,8 +239,6 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
               </Typography>
             </Box>
 
-
-<MentoriasIncluye />
           </Grid>
         </Grid>
       </Container>
