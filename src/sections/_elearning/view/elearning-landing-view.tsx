@@ -48,7 +48,7 @@ export default function ElearningLandingView({
 
       <ElearningOurClients brands={_brandsColor} />
 
-      <ElearningLandingFeaturedCourses courses={courses} />
+      {/* <ElearningLandingFeaturedCourses courses={courses} /> */}
 
       <ElearningTeam members={_members.slice(0, 4)} />
 
