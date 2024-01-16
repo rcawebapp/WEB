@@ -47,7 +47,7 @@ export default function HeaderSimple() {
         <Logo />
 
         <Link
-          href={paths.support}
+          href={paths.contact}
           component={RouterLink}
           color="inherit"
           sx={{ typography: 'subtitle2' }}
