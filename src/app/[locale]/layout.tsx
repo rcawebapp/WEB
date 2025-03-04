@@ -20,7 +20,7 @@ import MotionLazy from 'src/components/animate/motion-lazy';
 export const metadata = {
   title: 'RCA Capital',
   description:
-    'Somos una empresa de Fintech que diseña, valida y aplica soluciones financieras para construir portafolios ganadores y estrategias rentables en los mercados financieros.',
+    'Somos una compañía que diseña, valida y aplica soluciones financieras para construir portafolios ganadores y estrategias rentables en los mercados financieros.',
   keywords: 'trading,learning,academy,profit,exchange,admin,capital,invest',
   themeColor: '#000000',
   manifest: '/manifest.json',

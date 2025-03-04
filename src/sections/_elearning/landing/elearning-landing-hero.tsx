@@ -102,7 +102,7 @@ export default function Elearninglanding({ locale }: any) {
             >
               <Translate
                 section="landing"
-                text="Somos una empresa de Fintech que diseña, valida y aplica soluciones financieras para construir portafolios ganadores y estrategias rentables en los mercados financieros"
+                text="Somos una compañía que diseña, valida y aplica soluciones financieras para construir portafolios ganadores y estrategias rentables en los mercados financieros"
               />
             </Typography>
 

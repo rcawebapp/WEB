@@ -60,7 +60,7 @@ export default function ElearningAboutHero() {
                 <span style={{ color: 'blue' }}>1. </span>
                 <Translate
                   section="aboutUs"
-                  text="Herramientas tecnológicas propias que han sido creadas en respuesta a problemáticas específicas en la asignación óptima de capital para inversión y trading Somos una Fintech que genera resultados específicos y personalizados para cada situación de nuestros clientes"
+                  text="Herramientas tecnológicas propias que han sido creadas en respuesta a problemáticas específicas en la asignación óptima de capital para inversión y trading Somos una compañía que genera resultados específicos y personalizados para cada situación de nuestros clientes"
                 />
               </Typography>
             </Box>
