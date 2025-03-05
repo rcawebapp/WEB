@@ -139,17 +139,6 @@ export default function ElearningSus({ setProd, setCheckout }: Props) {
                 />
               </Typography>
             </Box>
-            <Grid item xs={12} sx={{ mb: 6 }}>
-              <Player
-                controls
-                url={t('landingPage')}
-                style={{
-                  display: 'block',
-                  margin: '0 auto',
-                  maxWidth: '70%',
-                }}
-              />
-            </Grid>
 
             <Grid container spacing={3}>
               {cardData.map((card, index) => (

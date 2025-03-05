@@ -119,21 +119,6 @@ export default function Elearninglanding({ locale }: any) {
 />
 
 </Box> */}
-
-            <Grid item xs={12} md={6}>
-              <Player
-                controls
-                url={t('landingPage')}
-                style={{
-                  display: 'block',
-                  margin: '0 auto',
-                  maxWidth: mdUp ? '70%' : '100%', // Set maxWidth based on screen size
-                  width: '100%',
-                  borderRadius: '10px',
-                }}
-              />
-            </Grid>
-
             <Stack
               direction="row"
               justifyContent="center" // Centrar horizontalmente en todos los dispositivos
